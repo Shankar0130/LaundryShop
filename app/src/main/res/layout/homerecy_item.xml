@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#ffffff"
+    android:layout_margin="20dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/homerecy_cardview"
+    android:layout_gravity="center_horizontal"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAF052"
+        android:id="@+id/homerecy_imagebutton"
+        android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="20dp"
+            android:elevation="5dp"
+            android:id="@+id/relLay_item"
+            android:clickable="true"
+            android:focusable="true"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/homerecy_imageview"
+                android:src="@drawable/india_rupee_currency_symbol"
+                android:layout_weight="0.5"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:id="@+id/homerecy_textview"
+                android:text="@string/charges"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

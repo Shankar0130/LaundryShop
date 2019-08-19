@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#34495e">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cloth_name"
+            android:text="suit"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/cloth_price"
+            android:text="₹"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cloth_price"
+            android:text="700"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"/>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/sub"
+            android:layout_toStartOf="@+id/add"
+            android:layout_below="@+id/cloth_price"
+            android:src="@drawable/add"
+            android:layout_marginEnd="20dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/add"
+            android:layout_below="@+id/cloth_price"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/minus"
+            android:layout_marginEnd="20dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

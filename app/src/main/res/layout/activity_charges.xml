@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChargesActivity">
+
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_vertical"
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:theme="@style/MyToolbarTheme"
+        app:title="@string/app_name"
+        app:titleTextColor="#ffffff">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+ <com.google.android.material.tabs.TabLayout
+    android:id="@+id/charges_tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?actionBarSize"
+    app:tabGravity="fill"
+    app:tabIndicatorColor="@color/white"
+    app:tabIndicatorHeight="4dp"
+    app:tabBackground="@color/colorPrimaryDark"
+    app:tabMode="scrollable"
+     app:tabSelectedTextColor="#ffffff"
+     android:layout_below="@+id/toolbar">
+
+
+ </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/charges_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/charges_tabLayout"
+        android:layout_margin="10dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00ff00"
+        android:id="@+id/charge_rellay">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/simple"
+            android:text="Total - ₹"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/simple"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plordcharge"
+            android:text="Place Order"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/ar"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ar"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>
